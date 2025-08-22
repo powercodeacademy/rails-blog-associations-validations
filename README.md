@@ -17,15 +17,15 @@ have).
 
 ## Migrations, Associations, and Routes
 
-1. Change the migration for `posts` to include `content` (set `content`'s
-   datatype to `text` to account for character length).
+1. Change the migration for `posts` to include `content` with a datatype of `text`.
 2. Create a migration, model, and optionally controller for `User` and `Tag`
    (via `rails generate`). Check out the documentation on
-   [generators](http://api.rubyonrails.org/classes/Rails/Generators.html), and
-   remember to skip adding tests.
+   [generators](http://api.rubyonrails.org/classes/Rails/Generators.html), and remember to skip adding tests.
+   * `users` and `tags` both only have a `name` column.
 3. In order to create the appropriate associations between `Post` and `Tag`, we
-   need to create a join table as well.
+   need to create a join table and model.
 4. Build out model associations and migrations.
+   * Posts should *OPTIONALLY* belong to a user
 5. Be sure to create the appropriate routes. For now, they can be written as
    `resources`.
 6. `create` the database, `migrate` the schema, and `seed` it.
@@ -50,7 +50,7 @@ forms. Take a look at what's happening in the partial `_form.html.erb` for
 users, which was created when we used Rails's scaffold generator:
 
 ```erb
-<%= form_for(@user) do |f| %>
+<%= form_with(model: @user, local: true) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
