@@ -5,4 +5,7 @@ class Post < ApplicationRecord
 
   validates :name, presence: true
   validates :content, presence: true
+
+  accepts_nested_attributes_for :tags
+
 end
