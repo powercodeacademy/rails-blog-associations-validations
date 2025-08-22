@@ -23,7 +23,7 @@ have).
    [generators](http://api.rubyonrails.org/classes/Rails/Generators.html), and remember to skip adding tests.
    * `users` and `tags` both only have a `name` column.
 3. In order to create the appropriate associations between `Post` and `Tag`, we
-   need to create a join table as well.
+   need to create a join table and model.
 4. Build out model associations and migrations.
    * Posts should *OPTIONALLY* belong to a user
 5. Be sure to create the appropriate routes. For now, they can be written as
