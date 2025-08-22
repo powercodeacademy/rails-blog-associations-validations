@@ -50,7 +50,7 @@ forms. Take a look at what's happening in the partial `_form.html.erb` for
 users, which was created when we used Rails's scaffold generator:
 
 ```erb
-<%= form_for(@user) do |f| %>
+<%= form_with(model: @user, local: true) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
