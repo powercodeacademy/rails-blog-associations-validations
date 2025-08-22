@@ -1,3 +1,5 @@
 class Post < ApplicationRecord
-  # Note: Be sure to set the user relationship as optional using `optional: true`.
+  belongs_to :user, optional: true
+  has_many :post_tags
+  has_many :tags, through: :post_tags
 end
