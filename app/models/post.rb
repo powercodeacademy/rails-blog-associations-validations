@@ -1,5 +1,7 @@
 class Post < ApplicationRecord
-  has_many :posts_tags
-  has_many :tags, through: :posts_tags
+  has_many :post_tags
+  has_many :tags, through: :post_tags
   belongs_to :user, optional: true
+
+  validates :name, :content, presence: true
 end
