@@ -1,31 +1,24 @@
 # Associations and Validations
 
-This is the second lab iteration off of
 [Rails Blog Scaffold](https://github.com/learn-co-curriculum/rails-blog-scaffold).
 
 _Remember_: when you generate models, controllers, etc., be sure to include the
-`--no-test-framework` option so that it skips tests (which the labs already
-have).
+`--no-test-framework` option so that it skips tests (which the labs already have)
 
 ## Objectives
 
 - Add a column to an existing table.
 - Generate models, views, and controllers.
-- Create associations between models.
-- Define proper routes.
-- Add validations.
-
-## Migrations, Associations, and Routes
 
 1. Change the migration for `posts` to include `content` with a datatype of `text`.
 2. Create a migration, model, and optionally controller for `User` and `Tag`
-   (via `rails generate`). Check out the documentation on
+   (via `bin/rails generate`). Check out the documentation on
    [generators](http://api.rubyonrails.org/classes/Rails/Generators.html), and remember to skip adding tests.
-   * `users` and `tags` both only have a `name` column.
+   - `users` and `tags` both only have a `name` column.
 3. In order to create the appropriate associations between `Post` and `Tag`, we
    need to create a join table and model.
 4. Build out model associations and migrations.
-   * Posts should *OPTIONALLY* belong to a user
+   - Posts should _OPTIONALLY_ belong to a user
 5. Be sure to create the appropriate routes. For now, they can be written as
    `resources`.
 6. `create` the database, `migrate` the schema, and `seed` it.
@@ -78,8 +71,6 @@ and Tag via the Post_Tag join model
 [here](http://stackoverflow.com/questions/16549382/how-to-permit-an-array-with-strong-parameters).
 
 Make the tests in `features/tags_for_posts_spec.rb` pass.
-
-## Resources
 
 - [Active Record Validations](http://guides.rubyonrails.org/active_record_validations.html)
 - [Check Boxes](http://edgeapi.rubyonrails.org/classes/ActionView/Helpers/FormBuilder.html#method-i-collection_check_boxes)
