@@ -9,6 +9,11 @@ _Remember_: when you generate models, controllers, etc., be sure to include the
 
 - Add a column to an existing table.
 - Generate models, views, and controllers.
+- Create associations between models.
+- Define proper routes.
+- Add validations
+
+- ## Migrations, Associations, and Routes
 
 1. Change the migration for `posts` to include `content` with a datatype of `text`.
 2. Create a migration, model, and optionally controller for `User` and `Tag`
@@ -71,6 +76,8 @@ and Tag via the Post_Tag join model
 [here](http://stackoverflow.com/questions/16549382/how-to-permit-an-array-with-strong-parameters).
 
 Make the tests in `features/tags_for_posts_spec.rb` pass.
+
+## Resources
 
 - [Active Record Validations](http://guides.rubyonrails.org/active_record_validations.html)
 - [Check Boxes](http://edgeapi.rubyonrails.org/classes/ActionView/Helpers/FormBuilder.html#method-i-collection_check_boxes)
